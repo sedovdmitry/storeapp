@@ -16,7 +16,7 @@ unless StoreApplication.frozen?
   StoreApplication.name = "My name"
 end
 #StoreApplication::Admin.email = "bla@bla.com"
-p StoreApplication::Admin.email
+#p StoreApplication::Admin.email
 
 #p StoreApplication.environment
 #p StoreApplication.name
@@ -35,8 +35,13 @@ cart.add_item RealItem.new({ :weight => 100, :price => 500, :name => "car" })
 cart.add_item RealItem.new({ :weight => 100, :price => 150, :name => "car" })
 cart.add_item RealItem.new({ :weight => 100, :price => 120, :name => "kettle" })
 
-method = "all_cars"
+#method = "all_cars"
 
 #order = Order.new
 #@items.each { |i| order.add_item(i) }
 #order.place
+
+order = Order.new
+order.place
+puts order.placed_at.strftime("%b %-d, %Y %H:%M:%S") # Jan 1, 1970 15:00:00
+puts order.time_spent_on_sending_email
