@@ -15,4 +15,10 @@ describe Cart do
     expect(cart.items).to include(item1, item2)
   end
 
+  it "removes item from itself"
+  it "counts item in itself"
+  it "places order using all the item that were added into the cart"
+  it "clears itself off the items after an order is placed"
+  
+
 end
